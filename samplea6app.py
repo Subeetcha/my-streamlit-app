@@ -41,6 +41,8 @@ il6 = st.number_input("IL-6 (pg/ml)", min_value=0.0)
 tnf = st.number_input("TNF-alpha (pg/ml)", min_value=0.0)
 testosterone = st.number_input("Testosterone (ng/dl)", min_value=0.0)
 gfap = st.number_input("GFAP (pg/ml)", min_value=0.0)
+lh=st.number_input"(LH VALUE (pg/ml)", min_value=0.0)
+fsh=st.number_input"(FSH VALUE (pg/ml)", min_value=0.0)
 
 # Button to check
 if st.button("Check Health Status"):
@@ -113,6 +115,7 @@ if st.button("Check Health Status"):
         st.markdown(r, unsafe_allow_html=True)
 
     st.warning("This app gives alerts when it is connected with the implantale chip.")
+
 
 
 
