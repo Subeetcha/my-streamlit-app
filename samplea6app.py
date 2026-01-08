@@ -105,13 +105,10 @@ if st.button("Check Health Status"):
         ratio=lh/fsh
         st.writr(f"lh/fsh ratio={ratio:.2f}")
         if ratio > 2:
-            results.append(box_text(" Abnormal-PCOD risk", is_normal=False))
+           st.error("abnormal-pcod risk")
         else:
-            results.append(box_text("Normal"))
+            st.success("normal")
             
-            
-    else:
-        results.append(box_text("Normal"))
     # GFAP
     if gfap > 30:
         results.append(box_text("GFAP: Elevated-Heartstroke risk", is_normal=False))
@@ -124,6 +121,7 @@ if st.button("Check Health Status"):
         st.markdown(r, unsafe_allow_html=True)
 
     st.warning("This app gives alerts when it is connected with the implantale chip.")
+
 
 
 
