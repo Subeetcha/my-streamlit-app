@@ -98,7 +98,7 @@ if st.button("Check Health Status"):
         results.append(box_text("Testosterone: Normal"))
     if abs(lh_fsh - 1.0) < 0.2:
         results.append(box_text("Abnormal-PCOD risk", is_normal=False))
-    else 
+    else:
         results.append(box_text("Normal"))
     # GFAP
     if gfap > 30:
@@ -112,5 +112,6 @@ if st.button("Check Health Status"):
         st.markdown(r, unsafe_allow_html=True)
 
     st.warning("This app gives alerts when it is connected with the implantale chip.")
+
 
 
