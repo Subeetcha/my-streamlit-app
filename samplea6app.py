@@ -99,8 +99,17 @@ if st.button("Check Health Status"):
     else:
         results.append(box_text("Testosterone: Normal"))
     #lhsfsh
-    if abs(lh_fsh - 1.0) < 0.2:
-        results.append(box_text("Abnormal-PCOD risk", is_normal=False))
+    if fsh==0:
+        st.error("fsh cant be zero")
+    else:
+        ratio=lh/fsh
+        st.writr(f"lh/fsh ratio={ratio:.2f}")
+        if ratio > 2:
+            results.append(box_text(" Abnormal-PCOD risk", is_normal=False))
+        else:
+            results.append(box_text("Normal"))
+            
+            
     else:
         results.append(box_text("Normal"))
     # GFAP
@@ -115,6 +124,7 @@ if st.button("Check Health Status"):
         st.markdown(r, unsafe_allow_html=True)
 
     st.warning("This app gives alerts when it is connected with the implantale chip.")
+
 
 
 
