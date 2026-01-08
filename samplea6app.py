@@ -107,8 +107,11 @@ if st.button("Check Health Status"):
     st.subheader("Results:")
     for r in results:
         st.markdown(r, unsafe_allow_html=True)
+    st.warning("LH and FSH value associated with PCOD not equal to 1:1 -PCOD RISK")
 
     st.warning("This app gives alerts when it is connected with the implantale chip.")
+    
+
 
 
 
