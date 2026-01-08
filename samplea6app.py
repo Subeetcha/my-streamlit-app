@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Set page config
-st.set_page_config(page_title="immunoapp", layout="centered")
+st.set_page_config(page_title="Immunoapp", layout="centered")
 
 # Set background color using HTML/CSS
 st.markdown(
@@ -29,7 +29,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("🩺 immunoapp")
+st.title("🩺 Immunoapp")
 st.markdown("Enter the biomarker values below:")
 
 # Input biomarkers
@@ -108,4 +108,5 @@ if st.button("Check Health Status"):
     for r in results:
         st.markdown(r, unsafe_allow_html=True)
 
-    st.warning("This app gives alerts only. It is not a medical diagnosis.")
+    st.warning("This app gives alerts when it is connected with the implantale chip.")
+
